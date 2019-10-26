@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ResponseMovie {
     String status;
-    @SerializedName("statusMessage")
+    @SerializedName("status_message")
     String statusMessage;
     ResponseData data;
 
@@ -47,7 +47,7 @@ public class ResponseMovie {
         @SerializedName(value = "movie_count")
         int movieCount;
         int limit;
-        @SerializedName(value = "pageNumber")
+        @SerializedName(value = "page_number")
         int pageNumber;
         List<Movie> movies;
 
