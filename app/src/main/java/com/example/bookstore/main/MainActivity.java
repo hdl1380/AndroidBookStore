@@ -29,7 +29,7 @@ public class MainActivity extends BaseActivity<MainContract.View, MainContract.P
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.btnFetchMovies).setOnClickListener(new View.OnClickListener() {
+        btnFetchItems.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //TODO 클릭시 Presenter로 다운스트림 발생

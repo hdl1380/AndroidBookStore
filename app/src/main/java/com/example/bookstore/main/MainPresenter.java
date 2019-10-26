@@ -31,7 +31,7 @@ public class MainPresenter extends BasePresenterImpl<MainContract.View>
                 .subscribe(new Consumer<List<Movie>>() {
                     @Override
                     public void accept(List<Movie> movies) throws Exception {
-                        Log.d("MainPresenter", "movies : " + movies.size());
+                        Log.d("MainPresenter", "movies : " + movies);
                     }
                 }, new Consumer<Throwable>() {
                     @Override

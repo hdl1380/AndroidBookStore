@@ -23,8 +23,8 @@ public abstract class BaseActivity
     }
 
     @Override
-    public void setContentView(View view) {
-        super.setContentView(view);
+    public void setContentView(int layoutResID) {
+        super.setContentView(layoutResID);
         ButterKnife.bind(this);
     }
 
