@@ -10,6 +10,7 @@ import com.example.bookstore.model.Movie;
 import java.util.List;
 
 import io.reactivex.Scheduler;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
@@ -28,10 +29,12 @@ public class MainPresenter extends BasePresenterImpl<MainContract.View>
         //TODO RxJava 로 View로 업스트림을 올리게 됩니다.
         this.repository.fetchMovies(pageNum)
                 .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<List<Movie>>() {
                     @Override
                     public void accept(List<Movie> movies) throws Exception {
                         Log.d("MainPresenter", "movies : " + movies);
+                        view.fetchMoviesDone(movies);
                     }
                 }, new Consumer<Throwable>() {
                     @Override

@@ -17,9 +17,11 @@ import java.util.List;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainAdapterViewHolder> {
     List<Movie> movies;
+    MainContract.Presenter presenter;
 
-    public MainAdapter(List<Movie> movies) {
+    public MainAdapter(List<Movie> movies, MainContract.Presenter presenter) {
         this.movies = movies;
+        this.presenter = presenter;
     }
 
     // 1. ViewHolder
