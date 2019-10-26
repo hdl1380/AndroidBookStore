@@ -8,6 +8,8 @@ public class MainPresenter extends BasePresenterImpl<MainContract.View>
     @Override
     public void fetchMovies(int pageNum) {
         //TODO Repository 에 데이터를 가져오도록 명령
-        //TODO RxJava 로 View로 업스트림을 올리게 됩니다. 
+        //TODO RxJava 로 View로 업스트림을 올리게 됩니다.
+
+
     }
 }
