@@ -9,6 +9,8 @@ public class Movie {
     String summary;
     @SerializedName(value = "small_cover_image")
     String smallCoverImage;
+    @SerializedName(value = "medium_cover_image")
+    String mediumCoverImage;
 
     public long getId() {
         return id;
@@ -42,6 +44,14 @@ public class Movie {
         this.smallCoverImage = smallCoverImage;
     }
 
+    public String getMediumCoverImage() {
+        return mediumCoverImage;
+    }
+
+    public void setMediumCoverImage(String mediumCoverImage) {
+        this.mediumCoverImage = mediumCoverImage;
+    }
+
     @Override
     public String toString() {
         return "Movie{" +
@@ -49,6 +59,7 @@ public class Movie {
                 ", title='" + title + '\'' +
                 ", summary='" + summary + '\'' +
                 ", smallCoverImage='" + smallCoverImage + '\'' +
+                ", mediumCoverImage='" + mediumCoverImage + '\'' +
                 '}';
     }
 }

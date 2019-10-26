@@ -34,8 +34,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainAdapterVie
         public MainAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
             this.thumbnail = itemView.findViewById(R.id.thumbnail);
-//            this.title = itemView.findViewById();
-//            this.summery = itemView.findViewById();
+            this.title = itemView.findViewById(R.id.title);
+            this.summery = itemView.findViewById(R.id.summery);
         }
     }
 
@@ -50,11 +50,13 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainAdapterVie
     @Override
     public void onBindViewHolder(@NonNull MainAdapterViewHolder holder, int position) {
         Movie movie = movies.get(position);
-        String thmubnailPath = movie.getSmallCoverImage();
+        String thmubnailPath = movie.getMediumCoverImage();
         Log.d("adapter", thmubnailPath);
         Glide.with(holder.itemView.getContext())
                 .load(thmubnailPath)
                 .into(holder.thumbnail);
+        holder.title.setText(movie.getTitle());
+        holder.summery.setText(movie.getSummary());
 
     }
 
