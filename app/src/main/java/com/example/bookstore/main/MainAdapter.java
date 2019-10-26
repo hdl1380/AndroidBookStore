@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.bookstore.R;
 import com.example.bookstore.model.Movie;
 
@@ -51,7 +52,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainAdapterVie
         Movie movie = movies.get(position);
         String thmubnailPath = movie.getSmallCoverImage();
         Log.d("adapter", thmubnailPath);
-//        holder.thumbnail.setImage
+        Glide.with(holder.itemView.getContext())
+                .load(thmubnailPath)
+                .into(holder.thumbnail);
+
     }
 
     @Override
