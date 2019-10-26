@@ -7,7 +7,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetRetrofit {
-    final static private String baseUrl = "http://10.0.2.2:3000/";
+    final static private String baseUrl = "https://yts.lt/api/v2/";
     private static NetRetrofit instance = new NetRetrofit();
 
     private static Retrofit retrofit;
