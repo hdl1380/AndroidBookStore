@@ -1,5 +1,7 @@
 package com.example.bookstore.main;
 
+import android.util.Log;
+
 import com.example.bookstore.base.BasePresenterImpl;
 import com.example.bookstore.logic.Repository;
 import com.example.bookstore.logic.RepositoryImpl;
@@ -27,6 +29,11 @@ public class MainPresenter extends BasePresenterImpl<MainContract.View>
                     @Override
                     public void accept(Object o) throws Exception {
 
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        Log.d("MainPresenter", throwable.getMessage());
                     }
                 });
     }
