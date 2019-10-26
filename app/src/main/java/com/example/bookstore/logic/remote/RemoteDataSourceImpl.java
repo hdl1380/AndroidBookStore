@@ -19,6 +19,8 @@ public class RemoteDataSourceImpl implements DataSource {
     @Override
     public Single<List<Movie>> fetchMovies(int pageNum) {
         // Repository 를 리턴
+        //TODO 서버연동 및 데이터 변환
+        //TODO 레트로핏 연동 / GSON / RxJava
         return null;
     }
 }

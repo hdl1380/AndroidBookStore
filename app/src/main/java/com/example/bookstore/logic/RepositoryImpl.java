@@ -21,6 +21,6 @@ public class RepositoryImpl<T> implements Repository {
 
     @Override
     public Single<List<Movie>> fetchMovies(int pageNum) {
-        return null;
+        return remoteDataSource.fetchMovies(pageNum);
     }
 }

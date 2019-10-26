@@ -33,7 +33,7 @@ public class MainActivity extends BaseActivity<MainContract.View, MainContract.P
             @Override
             public void onClick(View v) {
                 //TODO 클릭시 Presenter로 다운스트림 발생
-
+                mPresenter.fetchMovies(1);
             }
         });
     }
